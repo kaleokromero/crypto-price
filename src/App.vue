@@ -196,6 +196,7 @@ export default {
   width: 60rem;
   height: 42rem;
 }
+
 .banner-txt {
   position: absolute;
   top: 15%;
@@ -207,6 +208,7 @@ export default {
   font-weight: 550;
   font-stretch: semi-expanded;
 }
+
 .sub-text {
   position: absolute;
   top: 50%;
@@ -219,6 +221,7 @@ export default {
   font-stretch: normal;
   color: #929292;
 }
+
 .git-btn {
   position: absolute;
   top: 70%;
@@ -392,5 +395,86 @@ export default {
 
 .search-icon:hover {
   color: #148ace !important;
+}
+
+@media (max-width: 600px) {
+  .i {
+    left: 0;
+    width: 100%;
+    height: 50%;
+    margin-top: 0%;
+  }
+
+  .banner-txt {
+    top: 5%;
+    right: 0;
+    font-size: 2rem;
+    margin-top: 22rem;
+  }
+
+  .sub-text {
+    top: 20%;
+    right: 0;
+    font-size: 1rem;
+    margin-top: 20rem;
+  }
+
+  .git-btn {
+    top: 30%;
+    right: 10%;
+    width: 80%;
+    font-size: 1.5rem;
+    margin-top: 190px;
+  }
+
+  .ath-container {
+    margin-top: 150px;
+    height: auto;
+    font-size: medium;
+    align-content: center;
+  }
+
+  .btc-ath {
+    width: 100%;
+    right: 0;
+    left: 0;
+    font-size: 2rem;
+    margin-top: 10rem;
+  }
+  .eth-ath {
+    width: 100%;
+    right: 0;
+    left: 0;
+    font-size: 2rem;
+    margin-top: 30rem;
+  }
+
+  .price {
+    font-size: small;
+    font-weight: 700;
+    right: 30%;
+    top: 75%;
+  }
+  .eth-price {
+    font-size: small;
+    font-weight: 700;
+    right: 35%;
+    top: 75%;
+  }
+
+  .btc-img {
+    width: 6rem;
+    left: 35%;
+  }
+  .eth-img {
+    width: 8rem;
+    left: 30%;
+  }
+  .row {
+    margin-top: 40rem;
+  }
+  .table-dark {
+    font-size: medium;
+  }
 }
 </style>
