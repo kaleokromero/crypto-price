@@ -67,7 +67,7 @@
               <span style="margin-left: 6px">
                 {{ coin.name }}
               </span>
-              <span class="ms-2 text-uppercase text-muted"> - {{ coin.symbol }} </span>
+              <span> - {{ coin.symbol }} </span>
             </td>
             <td>${{ coin.current_price.toLocaleString() }}</td>
             <td :class="[coin.price_change_percentage_24h > 0 ? 'text-success' : 'text-danger']">
@@ -98,11 +98,10 @@ export default {
         threshold: 0.1
       }
 
-      observer.value = new IntersectionObserver((entries, observer) => {
+      observer.value = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.style.opacity = '1'
-            entry.targer.style.filter = 'blur(5px)'
           } else {
             entry.target.style.opacity = '0'
             entry.target.style.filter = 'blur(0)'
@@ -151,7 +150,6 @@ export default {
       options
     )
     const data = await res.json()
-    console.log(data)
     this.coins = data
     this.filteredCoins = data
   },
@@ -244,6 +242,7 @@ export default {
   padding: 10px;
   border-radius: 5px;
   position: relative;
+  top: 0;
   left: 2.5%;
 }
 .ath-text {
@@ -400,16 +399,16 @@ export default {
 @media (max-width: 600px) {
   .i {
     left: 0;
-    width: 100%;
-    height: 50%;
+    width: 80%;
+    height: 40%;
     margin-top: 0%;
   }
 
   .banner-txt {
-    top: 5%;
-    right: 0;
+    top: 15%;
+    right: 10%;
     font-size: 2rem;
-    margin-top: 22rem;
+    margin-top: 17rem;
   }
 
   .sub-text {
@@ -425,6 +424,7 @@ export default {
     width: 80%;
     font-size: 1.5rem;
     margin-top: 190px;
+    margin-bottom: 20px;
   }
 
   .ath-container {
@@ -433,11 +433,18 @@ export default {
     font-size: medium;
     align-content: center;
   }
-
+  .ath-text {
+    margin-top: 20px;
+    margin-bottom: 7px;
+  }
+  .ath-info {
+    align-items: center;
+    margin-right: 18px;
+  }
   .btc-ath {
     width: 100%;
-    right: 0;
-    left: 0;
+    right: 0%;
+    left: 0%;
     font-size: 2rem;
     margin-top: 10rem;
   }
@@ -452,29 +459,123 @@ export default {
   .price {
     font-size: small;
     font-weight: 700;
-    right: 30%;
+    right: 26%;
     top: 75%;
   }
   .eth-price {
     font-size: small;
     font-weight: 700;
-    right: 35%;
+    right: 32%;
     top: 75%;
   }
 
   .btc-img {
     width: 6rem;
-    left: 35%;
+    left: 40%;
   }
   .eth-img {
     width: 8rem;
-    left: 30%;
+    left: 35%;
+  }
+  .txt-mkt {
+    margin-top: 20px;
   }
   .row {
     margin-top: 40rem;
   }
   .table-dark {
     font-size: medium;
+  }
+}
+@media (min-width: 600px) and (max-width: 950px) {
+  .i {
+    left: 35%;
+    width: 60%;
+    height: 35%;
+    margin-top: 50px;
+  }
+
+  .banner-txt {
+    text-align: center;
+    margin-top: 10rem;
+    margin-left: 6%;
+    top: 0%;
+    right: 75%;
+    font-size: 3.5rem;
+  }
+
+  .sub-text {
+    text-align: center;
+    margin-top: 4em;
+    margin-bottom: 20px;
+    margin-left: 6%;
+    right: 75%;
+    font-size: 1.3rem;
+  }
+  .git-btn {
+    top: 50%;
+    right: 10%;
+    width: 85%;
+    font-size: 2rem;
+    margin-top: 20rem;
+    margin-bottom: 30px;
+  }
+  .ath-container {
+    margin-top: 25rem;
+  }
+  .ath-info {
+    align-items: center;
+  }
+  .price {
+    font-size: large;
+    align-items: center;
+    right: 25%;
+  }
+  .eth-price {
+    font-size: medium;
+    align-items: center;
+    right: 35%;
+  }
+  .eth-img {
+    left: 0%;
+  }
+}
+@media (min-width: 950px) and (max-width: 1030px) {
+  .i {
+    left: 45%;
+    width: 50%;
+    height: 30%;
+    margin-top: 7rem;
+  }
+  .banner-txt {
+    text-align: center;
+    margin-top: 15rem;
+    top: 0%;
+    font-size: 3.5rem;
+    font-weight: 550;
+    font-stretch: expanded;
+  }
+  .sub-text {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .git-btn {
+    left: 5%;
+  }
+  .ath-container {
+    margin-top: 18rem;
+  }
+  .eth-img {
+    align-items: center;
+    left: 10%;
+  }
+  .eth-price {
+    align-items: center;
+    font-size: large;
+    right: 30%;
+  }
+  .price {
+    font-size: large;
   }
 }
 </style>
