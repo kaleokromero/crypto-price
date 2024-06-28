@@ -1,4 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
+import './src/assets/banner.png'
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -9,7 +10,7 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   build: {
     rolloupOptions: {
-      external: ['src/assets/banner.png']
+      external: ['/src/assets/banner.png']
     }
   },
   resolve: {
