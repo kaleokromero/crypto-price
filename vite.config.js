@@ -9,7 +9,7 @@ export default defineConfig({
   plugins: [vue(), vueJsx()],
   build: {
     rolloupOptions: {
-      external: ['C:Userscarlocrypto-pricesrcassets\banner.png']
+      external: ['src/assets/banner.png']
     }
   },
   resolve: {
