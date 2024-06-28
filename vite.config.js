@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
-import './src/assets/banner.png'
+import './src/assets/banner.png' // Import the image for Vite to recognize it
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -19,13 +19,21 @@ export default defineConfig({
     })
   ],
   build: {
-    rolloupOptions: {
-      external: ['/src/assets/banner.png']
+    rollupOptions: {
+      external: ['/src/assets/banner.png'] // Remove this line if you want vsharp to process the image
     }
   },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
+    }
+  },
+  // Add this section to configure file-loader
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "@/styles/variables.scss";`
+      }
     }
   }
 })
