@@ -1,7 +1,6 @@
 # crypto-price
 
-This template should help get you started developing with Vue 3 in Vite.
-
+This is my first VUEjs project published to github! it utilizes Coingecko API to get all the crypto information. This served for learning purposes and utilizes the vue library using composition api, ref and computed!
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
