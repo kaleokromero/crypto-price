@@ -427,7 +427,7 @@ export default {
   }
 
   .ath-container {
-    margin-top: 150px;
+    margin-top: 20rem;
     height: auto;
     font-size: medium;
     align-content: center;
