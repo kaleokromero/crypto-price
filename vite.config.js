@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
-import './src/assets/banner.png' // Import the image for Vite to recognize it
+import './src/assets/banner.jpg' // Import the image for Vite to recognize it
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
