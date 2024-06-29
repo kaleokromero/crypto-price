@@ -10,7 +10,7 @@
         This project utilizes coingecko oficial API to provide you with current prices of your
         favorite crypto coin
       </p>
-      <img src="C:\Users\carlo\crypto-price\src\assets\banner.jpg" class="i" />
+      <img src="./assets/banner.jpg" class="i" />
       <button @click="onSubmit" class="git-btn">My github</button>
     </div>
 
@@ -82,7 +82,6 @@
 </template>
 
 <script>
-// eslint-disable-next-line no-unused-vars
 import { onMounted, onUnmounted, ref } from 'vue'
 // eslint-disable-next-line no-unused-vars
 import { computed } from 'vue'

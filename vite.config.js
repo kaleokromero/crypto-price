@@ -1,5 +1,4 @@
 import { fileURLToPath, URL } from 'node:url'
-import './src/assets/banner.jpg' // Import the image for Vite to recognize it
 
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
@@ -28,7 +27,6 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
   },
-  // Add this section to configure file-loader
   css: {
     preprocessorOptions: {
       scss: {
