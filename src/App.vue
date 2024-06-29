@@ -10,7 +10,7 @@
         This project utilizes coingecko oficial API to provide you with current prices of your
         favorite crypto coin
       </p>
-      <img src="C:\Users\carlo\crypto-price\src\assets\banner.png" class="i" />
+      <img src="C:\Users\carlo\crypto-price\src\assets\banner.jpg" class="i" />
       <button @click="onSubmit" class="git-btn">My github</button>
     </div>
 
